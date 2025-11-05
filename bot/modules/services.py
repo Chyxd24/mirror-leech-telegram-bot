@@ -11,7 +11,7 @@ async def start(_, message):
     buttons = ButtonMaker()
     # tombol default
     buttons.url_button("Repo", "https://www.github.com/Chyxd24/")
-    buttons.url_button("Code Owner", "https://t.me/S3LVNVMMASA")
+    buttons.url_button("Admin", "https://t.me/S3LVNVMMASA")
     # tombol tambahan (custom kamu)
     buttons.url_button("💬 Join Mirror Group", "https://t.me/mirrorleechg")
     buttons.url_button("📜 Rules", "https://t.me/mirrorleechg/4")
