@@ -42,3 +42,8 @@ class BotCommands:
     SelectCommand = f"sel{i}"
     RssCommand = f"rss{i}"
     NzbSearchCommand = f"nzbsearch{i}"
+
+    # Subscription
+    MyPlanCommand = f"myplan{i}"
+    BindCommand = f"bind{i}"
+    UnbindCommand = f"unbind{i}"

@@ -70,6 +70,14 @@ class Config:
     WEB_PINCODE = False
     YT_DLP_OPTIONS = {}
 
+    # Subscription / Payment (BTZPay QRIS)
+    PUBLIC_MIRROR_GROUP_ID = 0
+    BTZPAY_BASE_URL = "https://web.btzpay.my.id"
+    BTZPAY_APIKEY = ""
+    BTZPAY_TIMEOUT_MS = 900000
+    # Optional: photo URL/file_id for subscription banner in PM
+    SUBSCRIPTION_THUMBNAIL = ""
+
     @classmethod
     def _convert(cls, key: str, value):
         if not hasattr(cls, key):

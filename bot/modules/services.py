@@ -5,6 +5,7 @@ from ..helper.telegram_helper.button_build import ButtonMaker
 from ..helper.telegram_helper.message_utils import send_message, edit_message, send_file
 from ..helper.telegram_helper.filters import CustomFilters
 from ..helper.telegram_helper.bot_commands import BotCommands
+from .subscription import send_subscribe_menu
 
 
 @new_task
@@ -15,6 +16,11 @@ async def start(_, message):
     )
     buttons.url_button("Code Owner", "https://t.me/anas_tayyar")
     reply_markup = buttons.build_menu(2)
+    # If user starts the bot in PM and is not authorized, show subscription options.
+    if message.chat.type == "private" and not await CustomFilters.authorized(_, message):
+        await send_subscribe_menu(message)
+        return
+
     if await CustomFilters.authorized(_, message):
         start_string = f"""
 This bot can mirror from links|tgfiles|torrents|nzb|rclone-cloud to any rclone cloud, Google Drive or to telegram.

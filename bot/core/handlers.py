@@ -221,6 +221,32 @@ def add_handlers():
             start, filters=command(BotCommands.StartCommand, case_sensitive=True)
         )
     )
+
+    # Subscription handlers
+    TgClient.bot.add_handler(
+        CallbackQueryHandler(subscription_callback, filters=regex(r"^sub "))
+    )
+    TgClient.bot.add_handler(
+        MessageHandler(
+            myplan,
+            filters=command(BotCommands.MyPlanCommand, case_sensitive=True)
+            & CustomFilters.authorized,
+        )
+    )
+    TgClient.bot.add_handler(
+        MessageHandler(
+            unbind_pm,
+            filters=command(BotCommands.UnbindCommand, case_sensitive=True)
+            & CustomFilters.authorized,
+        )
+    )
+    TgClient.bot.add_handler(
+        MessageHandler(
+            bind_in_group,
+            filters=command(BotCommands.BindCommand, case_sensitive=True)
+            & CustomFilters.subscriber,
+        )
+    )
     TgClient.bot.add_handler(
         MessageHandler(
             log,

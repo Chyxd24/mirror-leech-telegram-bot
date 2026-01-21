@@ -3,6 +3,18 @@ BOT_TOKEN = ""
 OWNER_ID = 0
 TELEGRAM_API = 0
 TELEGRAM_HASH = ""
+
+# ===== Subscription / Payment (BTZPay QRIS) =====
+# Public group where everyone can use the bot for free (no subscription required)
+PUBLIC_MIRROR_GROUP_ID = -5131348273
+
+# BTZPay QRIS gateway settings
+BTZPAY_BASE_URL = "https://web.btzpay.my.id"
+BTZPAY_APIKEY = ""  # fill this
+BTZPAY_TIMEOUT_MS = 900000  # 15 minutes
+
+# Optional: banner to show in PM when user is not subscribed (url or telegram file_id)
+SUBSCRIPTION_THUMBNAIL = ""
 # OPTIONAL CONFIG
 TG_PROXY = {}
 USER_SESSION_STRING = ""
