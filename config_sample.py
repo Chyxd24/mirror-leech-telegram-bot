@@ -1,11 +1,11 @@
 # REQUIRED CONFIG
-BOT_TOKEN = "acumalaka"
+BOT_TOKEN = ""
 OWNER_ID = 0
 TELEGRAM_API = 0
 TELEGRAM_HASH = ""
 
 # ===== Subscription / Payment (BTZPay QRIS) =====
-# Public group where everyone can use the bot for free (no subscription required)
+# Public group where everyone can use the bot for free (no subscription required) awikwok
 PUBLIC_MIRROR_GROUP_ID = -5131348273
 
 # BTZPay QRIS gateway settings
